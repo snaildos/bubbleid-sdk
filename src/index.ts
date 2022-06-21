@@ -47,5 +47,6 @@ export class InnaticalID {
       // `https://api.snaildos.com/connect` +
       // new URLSearchParams({ callback, id: this.appID })
       console.log("BubbleID connect is not integrated yet.")
+    )
   }
 }
