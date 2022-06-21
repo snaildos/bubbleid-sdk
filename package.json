@@ -1,0 +1,20 @@
+{
+  "name": "@snaildos/bubbleid-sdk",
+  "version": "1.0.2",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.24.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.3"
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "tsc"
+  }
+}
