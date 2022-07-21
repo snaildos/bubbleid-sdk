@@ -2,9 +2,11 @@
 ## Importing the wrapper
 ```npm add @snaildos/bubble-id-sdk```
 ## Configuring the wrapper
-```import { BubbleID } from '@snaildos/bubbleid-sdk'
+```
+import { BubbleID } from '@snaildos/bubbleid-sdk'
 // Define APP identifier
-const id = new BubbleID('example-app')```
+const id = new BubbleID('example-app')
+```
 ## createUser
 ```id.createUser(email, name, pass, captcha)```
 ### Returning
