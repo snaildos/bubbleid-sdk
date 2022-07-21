@@ -32,18 +32,26 @@ export class BubbleID {
     ).data;
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   async createUser(email: string, name: string, pass: string, captcha: string) {
     return (
-      client.post('/users/create', {
+      (await client.post('/users/create', {
         email: email,
         name: name,
         pass: pass,
         captcha: captcha
-      })
-      .then(function (response) {
-        console.log(response);
-      })
+      }))
+      .data
+    )
+  }
+
+  async loginUser(email: string, pass: string, captcha: string) {
+    return (
+      (await client.post('/users/login', {
+        email: email,
+        pass: pass,
+        captcha: captcha
+      }))
+      .data
     )
   }
 

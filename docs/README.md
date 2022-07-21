@@ -51,3 +51,15 @@ const id = new BubbleID('example-app')
 ```
 N/A
 ```
+## loginUser
+```id.loginUser(email, pass, captcha)```
+### Returning
+```
+{
+
+  "status": true,
+
+  "token": "string"
+
+}
+```
