@@ -12,7 +12,7 @@ export interface UserResponse {
   avatar?: string;
 }
 
-export class InnaticalID {
+export class BubbleID {
   private appID: string;
   private token: string;
 
@@ -30,6 +30,21 @@ export class InnaticalID {
         ...query,
       })
     ).data;
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  async createUser(email: string, name: string, pass: string, captcha: string) {
+    return (
+      client.post('/users/create', {
+        email: email,
+        name: name,
+        pass: pass,
+        captcha: captcha
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+    )
   }
 
   async getUserFromToken(token: string) {
